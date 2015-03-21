@@ -121,6 +121,13 @@ void initialize();
  */
 void operatorControl();
 
+void MoveVertical(int speed);
+
+void MoveHorizontal(int speed);
+
+void Rotate(int speed);
+
+int Recalculate(int speed);
 // End C++ export structure
 #ifdef __cplusplus
 }

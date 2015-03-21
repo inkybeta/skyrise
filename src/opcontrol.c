@@ -54,6 +54,13 @@
 void operatorControl() {
 
 	while (1) {
+		int verticalDrive = joystickGetAnalog(1, 3);
+		int horizontalDrive = joystickGetAnalog(1, 4);
+		motorSet(DRIVE_RIGHT_FRONT, verticalDrive);
+		motorSet(DRIVE_LEFT_FRONT, -verticalDrive);
+		motorSet(DRIVE_RIGHT_BACK, horizontalDrive);
+		motorSet(DRIVE_LEFT_BACK, horizontalDrive);
+		joystickGetAnalog(1, 4);
 		delay(20);
 	}
 }
