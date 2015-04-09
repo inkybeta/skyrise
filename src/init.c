@@ -45,6 +45,7 @@
 void initializeIO() {
 }
 
+extern Semaphore rightSensor;
 /*
  * Runs user initialization code. This function will be started in its own task with the default
  * priority and stack size once when the robot is starting up. It is possible that the VEXnet
@@ -59,4 +60,5 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
+	rightSensor = semaphoreCreate();
 }

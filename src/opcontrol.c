@@ -54,6 +54,8 @@
 void operatorControl() {
 
 	while (1) {
+		taskCreate(masterPID, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
+		taskCreate(slavePID, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
 		int verticalDrive = joystickGetAnalog(1, 3);
 		int horizontalDrive = joystickGetAnalog(1, 4);
 		motorSet(DRIVE_RIGHT_FRONT, verticalDrive);

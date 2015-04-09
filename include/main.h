@@ -74,9 +74,13 @@ extern "C" {
 #define DRIVE_RIGHT_FRONT 3
 #define DRIVE_RIGHT_BACK  4
 #define LIFT_LEFT_TOP	  5
-#define LIFT_LEFT_BOTTOM  6
-#define LIFT_RIGHT_TOP    7
-#define LIFT_RIGHT_BOTTOM 8
+#define LIFT_LEFT_MIDDLE  6
+#define LIFT_LEFT_BOTTOM  7
+#define LIFT_RIGHT_TOP    8
+#define LIFT_RIGHT_MIDDLE 9
+#define LIFT_RIGHT_BOTTOM 10
+
+Semaphore rightSenor;
 
 void autonomous();
 /**
@@ -126,6 +130,10 @@ void MoveVertical(int speed);
 void MoveHorizontal(int speed);
 
 void Rotate(int speed);
+
+void masterPID();
+
+void slavePID();
 
 int Recalculate(int speed);
 // End C++ export structure
